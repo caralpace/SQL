@@ -1,0 +1,24 @@
+CREATE TABLE bellbookcandle (id INTEGER, item TEXT, price INTEGER, in_stock INTEGER, sold_today INTEGER);
+
+INSERT INTO bellbookcandle VALUES (1,"candle",17,20,3);
+INSERT INTO bellbookcandle VALUES (2,"incense",4,100,8);
+INSERT INTO bellbookcandle VALUES (3,"grimoire",50,4,0);
+INSERT INTO bellbookcandle VALUES (4,"pride flag",16,10,1);
+INSERT INTO bellbookcandle VALUES (5,"healing salve",23,3,0);
+INSERT INTO bellbookcandle VALUES (6,"blanket",30,5,3);
+INSERT INTO bellbookcandle VALUES (7,"lamp",55,6,1);
+INSERT INTO bellbookcandle VALUES(8,"aloe plant",13,3,3);
+INSERT INTO bellbookcandle VALUES (9,"scrying mirror",40,3,1);
+INSERT INTO bellbookcandle VALUES (10,"herb dictionary",20,10,2);
+INSERT INTO bellbookcandle VALUES  (11,"crystal",10,150,17);
+INSERT INTO bellbookcandle VALUES (12,"bell",9,13,6);
+INSERT INTO bellbookcandle VALUES (13,"crystal ball",73,3,0);
+INSERT INTO bellbookcandle VALUES (14,"wand",96,3,0);
+INSERT INTO bellbookcandle VALUES (15,"ritual dagger",41,7,2);
+SELECT * FROM bellbookcandle;
+
+SELECT SUM(in_stock) FROM bellbookcandle;
+SELECT * FROM bellbookcandle ORDER BY price;
+
+SELECT * FROM bellbookcandle WHERE price >50  ORDER BY sold_today;
+SELECT item, SUM(sold_today) FROM bellbookcandle GROUP BY item ORDER BY sold_today
